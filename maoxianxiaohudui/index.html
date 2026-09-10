@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>冒险小虎队电子书 - 系列介绍、阅读顺序与电子版获取指南</title>
+<meta name="description" content="冒险小虎队电子书阅读指南：了解托马斯·布热齐纳创作的经典少年冒险系列，梳理主线与分支系列阅读顺序、版本差异、电子版获取方式与亲子共读建议。">
+<meta name="keywords" content="冒险小虎队电子书,冒险小虎队,少年冒险小说,布热齐纳,电子书阅读顺序">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+  :root{
+    --ink:#1c2230;
+    --ink-soft:#4a5468;
+    --paper:#f6f2e9;
+    --paper-2:#fffdf8;
+    --line:#e0d7c6;
+    --amber:#c8781a;
+    --amber-dark:#9c5a0d;
+    --teal:#1f6b63;
+    --teal-soft:#e4f0ee;
+    --shadow:0 10px 30px rgba(28,34,48,.09);
+    --radius:14px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.75;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--teal);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  img{max-width:100%;}
+  .wrap{width:min(1160px,92vw);margin:0 auto;}
+
+  /* ---------- 顶部导航 ---------- */
+  header.site-head{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,253,248,.94);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .head-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:18px;padding:12px 0;
+  }
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:.5px;}
+  .brand .mark{
+    width:34px;height:34px;border-radius:9px;flex:0 0 auto;
+    background:linear-gradient(140deg,var(--amber),#e6a844);
+    color:#fff;display:grid;place-items:center;font-size:17px;
+    box-shadow:0 4px 12px rgba(200,120,26,.35);
+  }
+  .brand small{display:block;font-size:11px;font-weight:500;color:var(--ink-soft);letter-spacing:1.6px;}
+  nav.main-nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0;flex-wrap:wrap;}
+  nav.main-nav a{
+    display:block;padding:7px 13px;border-radius:999px;
+    font-size:14.5px;color:var(--ink-soft);font-weight:600;
+  }
+  nav.main-nav a:hover{background:var(--teal-soft);color:var(--teal);text-decoration:none;}
+
+  /* ---------- 首屏 ---------- */
+  .hero{
+    background:
+      radial-gradient(circle at 88% 12%,rgba(200,120,26,.20),transparent 46%),
+      radial-gradient(circle at 6% 88%,rgba(31,107,99,.16),transparent 44%),
+      linear-gradient(180deg,#fffdf8,#f6f2e9);
+    border-bottom:1px solid var(--line);
+    padding:52px 0 44px;
+  }
+  .hero-grid{display:grid;grid-template-columns:1.35fr .95fr;gap:44px;align-items:center;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;font-weight:700;letter-spacing:1.4px;color:var(--amber-dark);
+    background:#fdf1de;border:1px solid #f0dcbb;border-radius:999px;padding:5px 14px;
+  }
+  .hero h1{
+    font-size:clamp(28px,4.1vw,44px);
+    line-height:1.28;margin:18px 0 14px;letter-spacing:-.5px;
+  }
+  .hero h1 em{font-style:normal;color:var(--amber-dark);}
+  .hero p.lead{font-size:17px;color:var(--ink-soft);margin:0 0 22px;max-width:60ch;}
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;padding:11px 22px;border-radius:10px;
+    font-weight:700;font-size:15px;border:1px solid transparent;cursor:pointer;
+  }
+  .btn-primary{background:var(--amber);color:#fff;box-shadow:0 8px 20px rgba(200,120,26,.28);}
+  .btn-primary:hover{background:var(--amber-dark);text-decoration:none;}
+  .btn-ghost{background:#fff;color:var(--teal);border-color:#c9dcd9;}
+  .btn-ghost:hover{background:var(--teal-soft);text-decoration:none;}
+
+  .hero-card{
+    background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 22px 18px;box-shadow:var(--shadow);
+  }
+  .hero-card h3{margin:0 0 12px;font-size:16px;letter-spacing:.4px;}
+  .hero-card ul{list-style:none;margin:0;padding:0;font-size:14.6px;}
+  .hero-card li{
+    display:flex;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line);color:var(--ink-soft);
+  }
+  .hero-card li:last-child{border-bottom:none;}
+  .hero-card li span.dot{
+    flex:0 0 auto;width:8px;height:8px;border-radius:50%;background:var(--teal);margin-top:9px;
+  }
+
+  /* ---------- 通用区块 ---------- */
+  section{padding:52px 0;}
+  section.tight{padding:40px 0;}
+  .sec-head{margin-bottom:26px;}
+  .sec-head h2{
+    font-size:clamp(21px,2.6vw,27px);margin:0 0 8px;letter-spacing:-.2px;
+  }
+  .sec-head p{margin:0;color:var(--ink-soft);font-size:15.5px;max-width:78ch;}
+  .kicker{
+    font-size:12.5px;font-weight:800;letter-spacing:2px;color:var(--teal);
+    text-transform:uppercase;margin-bottom:8px;
+  }
+
+  /* ---------- 系列卡片 ---------- */
+  .series-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:20px;
+  }
+  .series-card{
+    background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px;box-shadow:var(--shadow);display:flex;flex-direction:column;
+    border-top:4px solid var(--amber);
+  }
+  .series-card:nth-child(2n){border-top-color:var(--teal);}
+  .series-card:nth-child(3n){border-top-color:#7a5bb5;}
+  .series-card h3{margin:0 0 6px;font-size:17.5px;}
+  .series-card .tag{
+    font-size:12px;font-weight:700;color:var(--amber-dark);background:#fdf1de;
+    border-radius:6px;padding:2px 8px;align-self:flex-start;margin-bottom:12px;
+  }
+  .series-card p{margin:0 0 12px;font-size:14.6px;color:var(--ink-soft);}
+  .series-card ul{margin:0;padding-left:18px;font-size:14.2px;color:var(--ink-soft);}
+  .series-card ul li{margin-bottom:5px;}
+
+  /* ---------- 阅读顺序（时间线） ---------- */
+  .order-wrap{background:#fffdf8;border:1px solid var(--line);border-radius:var(--radius);padding:8px 0;box-shadow:var(--shadow);}
+  .timeline{list-style:none;margin:0;padding:0;}
+  .timeline li{
+    display:grid;grid-template-columns:76px 1fr;gap:18px;
+    padding:18px 26px;border-bottom:1px solid var(--line);
+  }
+  .timeline li:last-child{border-bottom:none;}
+  .timeline .step{
+    font-weight:800;color:#fff;background:var(--teal);
+    border-radius:8px;height:32px;display:grid;place-items:center;font-size:13.5px;letter-spacing:.5px;
+  }
+  .timeline li:nth-child(2) .step{background:var(--amber);}
+  .timeline li:nth-child(3) .step{background:#7a5bb5;}
+  .timeline li:nth-child(4) .step{background:#2f7d9e;}
+  .timeline li:nth-child(5) .step{background:#8a6a2f;}
+  .timeline h3{margin:0 0 4px;font-size:16.5px;}
+  .timeline p{margin:0;font-size:14.6px;color:var(--ink-soft);}
+
+  /* ---------- 双栏内容 ---------- */
+  .split{display:grid;grid-template-columns:1.5fr 1fr;gap:34px;align-items:start;}
+  .article-body h3{margin:26px 0 8px;font-size:18px;}
+  .article-body h3:first-child{margin-top:0;}
+  .article-body p{margin:0 0 14px;font-size:15.6px;color:#2b3346;}
+  .article-body ul,.article-body ol{padding-left:22px;font-size:15.4px;color:#2b3346;}
+  .article-body li{margin-bottom:7px;}
+  .note{
+    background:var(--teal-soft);border-left:4px solid var(--teal);
+    border-radius:0 10px 10px 0;padding:14px 18px;font-size:14.8px;color:#1d4a45;margin:18px 0;
+  }
+  .aside-box{
+    background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px;box-shadow:var(--shadow);margin-bottom:20px;
+  }
+  .aside-box h3{margin:0 0 12px;font-size:16px;}
+  .aside-box ul{list-style:none;margin:0;padding:0;font-size:14.4px;color:var(--ink-soft);}
+  .aside-box li{padding:8px 0;border-bottom:1px dashed var(--line);}
+  .aside-box li:last-child{border-bottom:none;}
+  .aside-box li b{color:var(--ink);}
+
+  /* ---------- 版本对比表 ---------- */
+  .table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper-2);}
+  table{width:100%;border-collapse:collapse;min-width:640px;font-size:14.6px;}
+  th,td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+  thead th{background:#f2ece0;font-size:14px;letter-spacing:.4px;color:#3a4356;}
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:nth-child(even){background:#fbf8f1;}
+
+  /* ---------- 获取方式 ---------- */
+  .ways{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;}
+  .way{
+    background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px;box-shadow:var(--shadow);
+  }
+  .way h3{margin:0 0 8px;font-size:16.5px;display:flex;align-items:center;gap:9px;}
+  .way h3 i{
+    font-style:normal;width:26px;height:26px;border-radius:7px;background:var(--teal-soft);
+    color:var(--teal);display:grid;place-items:center;font-size:14px;font-weight:800;
+  }
+  .way p{margin:0;font-size:14.5px;color:var(--ink-soft);}
+
+  /* ---------- FAQ ---------- */
+  .faq{background:#fffdf8;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);}
+  details{border-bottom:1px solid var(--line);}
+  details:last-child{border-bottom:none;}
+  summary{
+    cursor:pointer;padding:17px 22px;font-weight:700;font-size:15.8px;list-style:none;
+    display:flex;justify-content:space-between;gap:16px;align-items:center;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{
+    content:"+";font-weight:700;color:var(--amber);font-size:20px;line-height:1;flex:0 0 auto;
+  }
+  details[open] summary::after{content:"–";}
+  details[open] summary{background:#fbf6ec;}
+  .faq-body{padding:0 22px 18px;font-size:15px;color:var(--ink-soft);}
+  .faq-body p{margin:0 0 10px;}
+  .faq-body p:last-child{margin-bottom:0;}
+
+  /* ---------- 页脚 ---------- */
+  footer.site-foot{
+    background:#1c2230;color:#c3c9d6;padding:44px 0 26px;margin-top:20px;
+  }
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px;}
+  footer.site-foot h4{color:#fff;font-size:15px;margin:0 0 12px;letter-spacing:.6px;}
+  footer.site-foot p{font-size:14px;line-height:1.8;margin:0 0 10px;color:#9aa3b4;}
+  footer.site-foot ul{list-style:none;margin:0;padding:0;font-size:14px;}
+  footer.site-foot li{margin-bottom:8px;}
+  footer.site-foot a{color:#c3c9d6;}
+  footer.site-foot a:hover{color:#fff;}
+  .foot-bottom{
+    border-top:1px solid #2c3444;margin-top:30px;padding-top:18px;
+    font-size:13px;color:#7d8698;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  }
+
+  /* ---------- 响应式 ---------- */
+  @media (max-width:960px){
+    .hero-grid{grid-template-columns:1fr;gap:28px;}
+    .split{grid-template-columns:1fr;gap:26px;}
+    .foot-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:680px){
+    body{font-size:15.5px;}
+    .head-inner{flex-direction:column;align-items:flex-start;gap:10px;}
+    nav.main-nav ul{gap:2px;}
+    nav.main-nav a{padding:6px 10px;font-size:13.6px;}
+    .hero{padding:38px 0 32px;}
+    section{padding:38px 0;}
+    .timeline li{grid-template-columns:1fr;gap:8px;padding:16px 18px;}
+    .timeline .step{width:76px;}
+    .foot-grid{grid-template-columns:1fr;}
+    .foot-bottom{flex-direction:column;gap:6px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <div class="brand">
+      <span class="mark">虎</span>
+      <span>冒险小虎队电子书<small>少年冒险阅读资料站</small></span>
+    </div>
+    <nav class="main-nav" aria-label="主导航">
+      <ul>
+        <li><a href="#intro">系列概览</a></li>
+        <li><a href="#order">阅读顺序</a></li>
+        <li><a href="#versions">版本对比</a></li>
+        <li><a href="#access">获取方式</a></li>
+        <li><a href="#read">共读建议</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ 首屏 ============ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">少年侦探 · 冒险解谜</span>
+        <h1>冒险小虎队电子书：<em>从阅读顺序到版本选择</em>的一份实用指南</h1>
+        <p class="lead">
+          冒险小虎队是奥地利作家托马斯·布热齐纳创作的少年冒险解谜系列，以三位小侦探搭档破案为主线，
+          书中常附带解密卡、密码转盘等互动道具，是不少读者童年的第一套“侦探小说”。
+          如果你正在找这套书的电子版，或者想弄清楚该从哪一本开始读，下面把系列结构、阅读顺序、
+          版本差异和获取途径一次说清楚。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#order">查看推荐阅读顺序</a>
+          <a class="btn btn-ghost" href="#access">了解电子版获取途径</a>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="快速要点">
+        <h3>先看这几点</h3>
+        <ul>
+          <li><span class="dot"></span><span>作者：托马斯·布热齐纳（Thomas Brezina），奥地利儿童文学作家。</span></li>
+          <li><span class="dot"></span><span>主角团：碧吉、路克、帕特里克，三人组成“小虎队”。</span></li>
+          <li><span class="dot"></span><span>单本多为独立案件，跳读一般不影响理解。</span></li>
+          <li><span class="dot"></span><span>中文版由多家出版社先后引进，装帧与译名存在差异。</span></li>
+          <li><span class="dot"></span><span>电子版以正规数字阅读平台和图书馆电子借阅为主渠道。</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ 系列概览 ============ -->
+  <section id="intro">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Series Overview</div>
+        <h2>这套书到底写了什么</h2>
+        <p>冒险小虎队并不是单一的长篇连续故事，而是围绕同一组人物展开的多个子系列。理解这一点，对选择电子版和安排阅读顺序非常关键。</p>
+      </div>
+
+      <div class="series-grid">
+        <article class="series-card">
+          <span class="tag">主线基础</span>
+          <h3>经典案件系列</h3>
+          <p>最广为人知的一批作品，每本一个相对独立的案件，篇幅适中，适合作为入门起点。</p>
+          <ul>
+            <li>结构清晰：线索—推理—揭秘三段式</li>
+            <li>互动道具：解密卡、密码盘常见于纸质版</li>
+            <li>难度：适合小学中高年级至初中</li>
+          </ul>
+        </article>
+
+        <article class="series-card">
+          <span class="tag">主题分支</span>
+          <h3>知识冒险与旅行系列</h3>
+          <p>把案件背景放到特定地域或知识领域，冒险感更强，附带一定的科普与文化信息。</p>
+          <ul>
+            <li>场景跨度大，节奏偏快</li>
+            <li>适合已经读过基础系列、想换口味的读者</li>
+            <li>部分版本插图风格与主线不同</li>
+          </ul>
+        </article>
+
+        <article class="series-card">
+          <span class="tag">延伸阅读</span>
+          <h3>其他子系列与合辑</h3>
+          <p>不同时期、不同出版社还推出了若干命名各异的子系列与套装合辑，内容与主线互有交叉。</p>
+          <ul>
+            <li>合辑常按主题重新编排，不等同于原出版顺序</li>
+            <li>购买前建议核对收录书目</li>
+            <li>电子版是否齐全，取决于平台授权情况</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 阅读顺序 ============ -->
+  <section id="order" class="tight">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Reading Order</div>
+        <h2>冒险小虎队电子书怎么排阅读顺序</h2>
+        <p>由于绝大多数单本案件彼此独立，阅读顺序的弹性很大。下面这套顺序适合第一次系统阅读的读者，也方便在电子阅读器上按批次安排。</p>
+      </div>
+
+      <div class="order-wrap">
+        <ol class="timeline">
+          <li>
+            <span class="step">第一步</span>
+            <div>
+              <h3>先读任意一本经典案件，判断是否合口味</h3>
+              <p>不必纠结“第一本”，挑一本题材感兴趣的开始即可。重点感受叙事节奏、谜题密度和人物关系，再决定是否继续。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step">第二步</span>
+            <div>
+              <h3>按出版社标注的系列编号顺序推进</h3>
+              <p>同一系列内部，编号通常反映了出版先后与人物关系的细微推进。电子版目录页或版权页一般会标注系列名与序号。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step">第三步</span>
+            <div>
+              <h3>读完一个系列，再切换到下一个系列</h3>
+              <p>不建议在多个子系列之间频繁跳转，容易混淆人物设定与叙事风格。按系列整体推进，阅读体验更连贯。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step">第四步</span>
+            <div>
+              <h3>把合辑当作补充，而不是起点</h3>
+              <p>合辑往往按主题重排，若作为入门容易打乱节奏。建议在读过若干单本之后，再用合辑查漏补缺。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step">第五步</span>
+            <div>
+              <h3>亲子共读可单独排一条线</h3>
+              <p>如果由家长陪读，可优先选择篇幅较短、场景贴近日常生活的案件，降低理解门槛，再逐步过渡到复杂谜题。</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 正文 + 侧栏 ============ -->
+  <section id="guide">
+    <div class="wrap split">
+      <div class="article-body">
+        <h3>这套书的吸引力在哪里</h3>
+        <p>
+          冒险小虎队的核心并不在于血腥或惊悚，而在于“参与感”。很多版本会在关键情节处设置提问，
+          读者需要结合书中给出的线索自行推断，再通过解密卡或对照表验证答案。
+          这种把读者从旁观者变成参与者的设计，是它区别于普通少年小说的关键。
+        </p>
+        <p>
+          三位主角的性格分工也相对明确：有人负责观察细节，有人负责逻辑推演，有人负责行动与胆量。
+          这种配置让不同性格的孩子都能在书中找到代入对象，也方便在共读时展开讨论。
+        </p>
+
+        <h3>电子版与纸质版的体验差异</h3>
+        <p>
+          纸质版的一大特点是随书附带的互动道具，例如解密卡、转盘、对照表等。
+          这些道具依赖物理操作，纯文本电子版通常无法完全还原。
+          因此，如果某个版本高度依赖道具解谜，电子版可能会在体验上打折扣。
+        </p>
+        <div class="note">
+          建议：如果你特别在意解谜互动，优先选择保留了互动页面的电子版，或考虑纸质版；
+          如果只是想重温故事、了解剧情，普通电子版完全可以满足需求。
+        </div>
+
+        <h3>挑选电子版时可以关注什么</h3>
+        <ul>
+          <li><b>是否完整收录：</b>确认电子版是否包含插图、互动页面与附录，部分版本会做删减。</li>
+          <li><b>译者与译名：</b>不同出版社的人名、书名译法可能不同，同一系列尽量统一版本，避免混淆。</li>
+          <li><b>排版适配：</b>在手机、平板、墨水屏上的阅读效果差异较大，购买前可先试读样章。</li>
+          <li><b>授权来源：</b>优先选择正规数字阅读平台或图书馆电子借阅服务，避免来源不明的文件。</li>
+        </ul>
+
+        <h3>适合什么年龄段的读者</h3>
+        <p>
+          整体来看，这套书面向的是小学中高年级到初中的读者群体。低龄孩子如果对文字量较大的章节书还不适应，
+          可以先从篇幅较短、插图较多的版本入手，或采用家长朗读、孩子猜谜的方式共读。
+          年龄偏大的读者则更多是出于怀旧或轻松阅读的目的，阅读速度会明显更快。
+        </p>
+      </div>
+
+      <aside>
+        <div class="aside-box">
+          <h3>一句话速览</h3>
+          <ul>
+            <li><b>类型：</b>少年侦探冒险小说</li>
+            <li><b>作者：</b>托马斯·布热齐纳</li>
+            <li><b>结构：</b>多子系列，单本多为独立案件</li>
+            <li><b>特色：</b>互动解谜、读者参与</li>
+            <li><b>适读：</b>小学中高年级至初中</li>
+          </ul>
+        </div>
+        <div class="aside-box">
+          <h3>阅读小提示</h3>
+          <ul>
+            <li>先试读一本，再决定是否整套入手</li>
+            <li>同一系列尽量按编号推进</li>
+            <li>电子版注意确认是否含互动页面</li>
+            <li>共读时可让孩子先猜、再验证</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ 版本对比 ============ -->
+  <section id="versions" class="tight">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Editions</div>
+        <h2>纸质版、电子版、图书馆借阅对比</h2>
+        <p>不同获取方式各有取舍，下表按常见情况整理，具体以你所在平台的实际说明为准。</p>
+      </div>
+
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>获取方式</th>
+              <th>互动体验</th>
+              <th>便携程度</th>
+              <th>适合场景</th>
+              <th>需要留意</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>纸质版</td>
+              <td>完整，含解密卡等道具</td>
+              <td>需随身携带，占空间</td>
+              <td>首次阅读、亲子共读、收藏</td>
+              <td>部分早期版本可能已不易买到</td>
+            </tr>
+            <tr>
+              <td>正规平台电子版</td>
+              <td>取决于版本，部分简化</td>
+              <td>高，多设备同步</td>
+              <td>通勤、睡前碎片化阅读</td>
+              <td>确认是否完整收录插图与附录</td>
+            </tr>
+            <tr>
+              <td>图书馆电子借阅</td>
+              <td>通常为纯文字阅读</td>
+              <td>高，借期有限</td>
+              <td>试读、预算有限的读者</td>
+              <td>可借册数与借期由馆方规定</td>
+            </tr>
+            <tr>
+              <td>套装合辑</td>
+              <td>视合辑编排而定</td>
+              <td>视载体而定</td>
+              <td>集中补读某一主题</td>
+              <td>核对收录书目，避免重复购买</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 获取方式 ============ -->
+  <section id="access">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">How to Get</div>
+        <h2>想读电子版，可以从这些途径入手</h2>
+        <p>以下为常见且相对稳妥的途径，具体可用性受地区、平台授权与版权状态影响。</p>
+      </div>
+
+      <div class="ways">
+        <article class="way">
+          <h3><i>1</i>正规数字阅读平台</h3>
+          <p>主流电子书平台通常会按版权方授权上架。搜索书名或作者名，先看试读样章，确认排版与完整性后再购买。</p>
+        </article>
+        <article class="way">
+          <h3><i>2</i>公共图书馆电子借阅</h3>
+          <p>不少图书馆提供电子书借阅服务，凭读者证即可在线借阅。适合先试读几本，再决定是否购买。</p>
+        </article>
+        <article class="way">
+          <h3><i>3</i>学校与社区图书角</h3>
+          <p>部分学校图书馆或社区阅读空间会配置该系列。可先查询馆藏目录，确认是否有可借册次。</p>
+        </article>
+        <article class="way">
+          <h3><i>4</i>二手纸质版补充</h3>
+          <p>如果在意互动道具，二手渠道可能更容易凑齐早期版本，但需注意品相与配件是否完整。</p>
+        </article>
+      </div>
+
+      <div class="note" style="margin-top:22px;">
+        提醒：请通过正规渠道获取电子书，避免使用来源不明、可能携带风险的文件。
+        本页仅提供阅读参考信息，不提供任何下载链接。
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 共读建议 ============ -->
+  <section id="read" class="tight">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Reading Tips</div>
+        <h2>亲子共读与自主阅读的几点建议</h2>
+        <p>这套书天然适合讨论式阅读，下面几点在实际陪读中比较实用。</p>
+      </div>
+
+      <div class="series-grid">
+        <article class="series-card">
+          <h3>先猜后看，保留悬念</h3>
+          <p>遇到书中的提问环节，先让孩子说出自己的判断和理由，再翻到答案页验证。推理过程比答案本身更重要。</p>
+        </article>
+        <article class="series-card">
+          <h3>用线索清单梳理逻辑</h3>
+          <p>读到中段时，可以一起把已知线索列出来，看看哪些是干扰项、哪些是关键信息，训练信息筛选能力。</p>
+        </article>
+        <article class="series-card">
+          <h3>控制单次阅读量</h3>
+          <p>一章或一个案件节点作为一次阅读单元比较合适，既能保持兴趣，也便于下次接着讨论。</p>
+        </article>
+        <article class="series-card">
+          <h3>不追求读完全部</h3>
+          <p>系列册数较多，挑喜欢的题材读即可。阅读兴趣的延续，比“集齐”更重要。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">FAQ</div>
+        <h2>常见问题</h2>
+        <p>关于冒险小虎队电子书，读者问得比较多的几个问题。</p>
+      </div>
+
+      <div class="faq">
+        <details open>
+          <summary>冒险小虎队一定要按顺序读吗？</summary>
+          <div class="faq-body">
+            <p>不必严格按顺序。绝大多数单本是一个相对独立的案件，人物关系也保持稳定，跳读一般不会影响理解。</p>
+            <p>但同一子系列内部，按编号顺序阅读会更连贯，尤其是人物设定逐步展开的部分。</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>电子版会不会缺少解密卡等互动内容？</summary>
+          <div class="faq-body">
+            <p>这取决于具体版本。部分电子版会以图文形式保留互动页面，也有版本做了简化处理。</p>
+            <p>购买前建议先看试读样章，或查看平台页面上的版本说明，确认是否包含插图与附录。</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>适合几岁的孩子阅读？</summary>
+          <div class="faq-body">
+            <p>整体面向小学中高年级至初中的读者。文字量适中，情节紧张但不惊悚。</p>
+            <p>低龄孩子如果独立阅读有困难，可以由家长朗读，孩子负责猜谜和推理，同样能获得乐趣。</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>不同出版社的版本有什么区别？</summary>
+          <div class="faq-body">
+            <p>主要差异在译名、装帧、插图风格和收录范围。部分版本会把若干单本重新编排成合辑。</p>
+            <p>如果打算系统阅读，建议尽量选择同一出版社的版本，减少人名与书名不一致带来的困扰。</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>在哪里可以合法读到电子版？</summary>
+          <div class="faq-body">
+            <p>可以优先查询正规数字阅读平台的在售情况，以及当地公共图书馆的电子借阅服务。</p>
+            <p>具体可借册数与可用性受平台授权和地区限制影响，建议以实际查询结果为准。</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>冒险小虎队电子书</h4>
+        <p>一个围绕少年冒险解谜系列的阅读资料页，整理系列结构、阅读顺序、版本差异与获取途径，供读者和陪读家长参考。</p>
+        <p>本页内容为阅读参考信息，不提供任何文件下载，也不代表任何出版机构或版权方立场。</p>
+      </div>
+      <div>
+        <h4>页面导航</h4>
+        <ul>
+          <li><a href="#intro">系列概览</a></li>
+          <li><a href="#order">阅读顺序</a></li>
+          <li><a href="#versions">版本对比</a></li>
+          <li><a href="#access">获取方式</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>阅读提醒</h4>
+        <ul>
+          <li>优先选择正规渠道获取电子书</li>
+          <li>购买前查看试读样章</li>
+          <li>同一系列尽量统一版本</li>
+          <li>按兴趣选书，不必强求集齐</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2024 冒险小虎队电子书阅读资料页</span>
+      <span>内容仅供阅读参考，请支持正版出版物</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // 导航平滑滚动（对不支持 scroll-behavior 的浏览器做兜底）
+  document.querySelectorAll('nav.main-nav a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var id = this.getAttribute('href').slice(1);
+      var target = document.getElementById(id);
+      if (!target) return;
+      e.preventDefault();
+      var top = target.getBoundingClientRect().top + window.pageYOffset - 72;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+  });
+
+  // FAQ 手风琴：同一时间只展开一项，减少页面跳动
+  var faqItems = document.querySelectorAll('.faq details');
+  faqItems.forEach(function (item) {
+    item.addEventListener('toggle', function () {
+      if (!item.open) return;
+      faqItems.forEach(function (other) {
+        if (other !== item) other.open = false;
+      });
+    });
+  });
+</script>
+
+</body>
+  </html>
