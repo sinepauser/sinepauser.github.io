@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>快猫记录世界记录你-记录生活瞬间与世界的影像社区</title>
+<meta name="description" content="快猫记录世界记录你，一个专注于影像记录与生活分享的内容社区。在这里你可以记录世界的变化、记录自己的日常，浏览影像故事、参与话题记录、了解拍摄与整理素材的实用方法。">
+<meta name="keywords" content="快猫记录世界记录你,影像记录,生活记录,视频社区,记录世界,记录生活,影像分享">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --ink: #1b1d29;
+  --ink-soft: #4b4f63;
+  --ink-mute: #7d8296;
+  --line: #e6e8f0;
+  --bg: #f7f8fc;
+  --panel: #ffffff;
+  --accent: #ff5a5f;
+  --accent-deep: #e03e44;
+  --accent-soft: #fff0f0;
+  --blue: #3d6bff;
+  --blue-soft: #eef2ff;
+  --radius: 14px;
+  --shadow: 0 6px 24px rgba(27, 29, 41, 0.07);
+}
+body {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.wrap {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 66px;
+  gap: 18px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--accent), #ff9068);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  box-shadow: 0 4px 12px rgba(255, 90, 95, 0.35);
+}
+.brand small {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--ink-mute);
+  margin-left: 2px;
+}
+.main-nav {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.main-nav a {
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  padding: 7px 13px;
+  border-radius: 9px;
+  transition: 0.2s;
+}
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--accent-deep);
+  background: var(--accent-soft);
+}
+.header-cta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.btn {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  font-size: 14.5px;
+  font-family: inherit;
+  padding: 9px 20px;
+  border-radius: 10px;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(255, 90, 95, 0.35);
+}
+.btn-primary:hover {
+  background: var(--accent-deep);
+}
+.btn-ghost {
+  background: #fff;
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+}
+.btn-ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent-deep);
+}
+
+/* ---------- hero ---------- */
+.hero {
+  background: linear-gradient(160deg, #fff6f4 0%, #f4f6ff 55%, #f7f8fc 100%);
+  border-bottom: 1px solid var(--line);
+  padding: 56px 0 48px;
+}
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 44px;
+  align-items: center;
+}
+.hero-tag {
+  display: inline-block;
+  font-size: 13px;
+  color: var(--accent-deep);
+  background: #fff;
+  border: 1px solid #ffd9d9;
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+.hero h1 {
+  font-size: 38px;
+  line-height: 1.32;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+}
+.hero h1 em {
+  font-style: normal;
+  color: var(--accent);
+}
+.hero p.lead {
+  font-size: 16px;
+  color: var(--ink-soft);
+  max-width: 540px;
+  margin-bottom: 26px;
+}
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+}
+.hero-points {
+  display: flex;
+  gap: 26px;
+  flex-wrap: wrap;
+  font-size: 13.5px;
+  color: var(--ink-mute);
+}
+.hero-points span::before {
+  content: "●";
+  color: var(--accent);
+  font-size: 9px;
+  margin-right: 7px;
+  vertical-align: 2px;
+}
+.hero-visual {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+.frame-stack {
+  display: grid;
+  gap: 12px;
+}
+.frame {
+  border-radius: 12px;
+  padding: 14px 16px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+}
+.frame.rec {
+  background: linear-gradient(120deg, #fff1f1, #fff8f2);
+  border-color: #ffdcdc;
+}
+.frame-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--ink-mute);
+  margin-bottom: 8px;
+}
+.dot-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent-deep);
+  font-weight: 600;
+}
+.dot-live i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+  animation: pulse 1.6s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(0.8); }
+}
+.frame-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.frame-desc {
+  font-size: 13px;
+  color: var(--ink-mute);
+}
+.bar {
+  height: 6px;
+  border-radius: 999px;
+  background: #eceef6;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.bar i {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), #ffa06b);
+}
+
+/* ---------- section base ---------- */
+section {
+  padding: 52px 0;
+}
+.section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.section-head h2 {
+  font-size: 24px;
+  letter-spacing: -0.3px;
+}
+.section-head p {
+  font-size: 14px;
+  color: var(--ink-mute);
+  margin-top: 6px;
+}
+.more-link {
+  font-size: 14px;
+  color: var(--blue);
+}
+.more-link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- 分类导航 ---------- */
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+}
+.cat-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px 16px;
+  text-align: center;
+  transition: 0.22s;
+}
+.cat-card:hover {
+  transform: translateY(-3px);
+  border-color: #ffd0d0;
+  box-shadow: var(--shadow);
+}
+.cat-icon {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 10px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  background: var(--blue-soft);
+}
+.cat-card:nth-child(2n) .cat-icon { background: var(--accent-soft); }
+.cat-card:nth-child(3n) .cat-icon { background: #eefaf3; }
+.cat-card:nth-child(4n) .cat-icon { background: #fff8e8; }
+.cat-card strong {
+  display: block;
+  font-size: 14.5px;
+  margin-bottom: 4px;
+}
+.cat-card span {
+  font-size: 12.5px;
+  color: var(--ink-mute);
+}
+
+/* ---------- 热门记录 ---------- */
+.record-layout {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.record-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+.record-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: 0.22s;
+  display: flex;
+  flex-direction: column;
+}
+.record-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-3px);
+}
+.thumb {
+  height: 132px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 12px;
+  color: #fff;
+  font-size: 12.5px;
+  font-weight: 500;
+}
+.thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.42));
+}
+.thumb span {
+  position: relative;
+  z-index: 1;
+}
+.t1 { background: linear-gradient(135deg, #ff8a65, #ff5a5f); }
+.t2 { background: linear-gradient(135deg, #4f8bff, #6f5cff); }
+.t3 { background: linear-gradient(135deg, #2fc39b, #37a3d6); }
+.t4 { background: linear-gradient(135deg, #f5a623, #ef6f4c); }
+.record-body {
+  padding: 14px 16px 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.record-body h3 {
+  font-size: 15.5px;
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+.record-body p {
+  font-size: 13px;
+  color: var(--ink-mute);
+  flex: 1;
+}
+.record-meta {
+  display: flex;
+  gap: 14px;
+  font-size: 12.5px;
+  color: var(--ink-mute);
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--line);
+}
+
+/* ---------- 侧栏话题 ---------- */
+.side-panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+.side-panel + .side-panel {
+  margin-top: 18px;
+}
+.side-panel h3 {
+  font-size: 16px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.side-panel h3::before {
+  content: "";
+  width: 4px;
+  height: 15px;
+  border-radius: 3px;
+  background: var(--accent);
+}
+.topic-list {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+.topic-list li {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+}
+.topic-rank {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--ink-mute);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-top: 2px;
+}
+.topic-list li:nth-child(1) .topic-rank,
+.topic-list li:nth-child(2) .topic-rank,
+.topic-list li:nth-child(3) .topic-rank {
+  background: var(--accent);
+  color: #fff;
+}
+.topic-list strong {
+  font-weight: 600;
+  display: block;
+}
+.topic-list em {
+  font-style: normal;
+  font-size: 12.5px;
+  color: var(--ink-mute);
+}
+.guide-list {
+  list-style: none;
+  display: grid;
+  gap: 11px;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+}
+.guide-list li {
+  padding-left: 18px;
+  position: relative;
+}
+.guide-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--blue);
+  font-weight: 700;
+}
+
+/* ---------- 记录方法 ---------- */
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.method-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px 22px;
+}
+.method-num {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.method-card h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+.method-card p {
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.method-card ul {
+  margin-top: 12px;
+  padding-left: 18px;
+  font-size: 13.5px;
+  color: var(--ink-mute);
+  display: grid;
+  gap: 6px;
+}
+
+/* ---------- 时间线 ---------- */
+.timeline {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 8px 26px;
+}
+.tl-item {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px dashed var(--line);
+}
+.tl-item:last-child {
+  border-bottom: none;
+}
+.tl-date {
+  font-size: 13px;
+  color: var(--ink-mute);
+  padding-top: 2px;
+}
+.tl-body h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+.tl-body p {
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+/* ---------- FAQ ---------- */
+.faq-wrap {
+  display: grid;
+  gap: 12px;
+}
+.faq-item {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+}
+.faq-item h3 {
+  font-size: 15.5px;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 24px;
+}
+.faq-item h3::before {
+  content: "Q";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  font-size: 11px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4px;
+}
+.faq-item p {
+  font-size: 14px;
+  color: var(--ink-soft);
+  padding-left: 24px;
+}
+
+/* ---------- CTA 条 ---------- */
+.cta-band {
+  background: linear-gradient(120deg, #1b1d29, #2f3350);
+  border-radius: 18px;
+  padding: 40px 38px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px;
+  flex-wrap: wrap;
+}
+.cta-band h2 {
+  font-size: 23px;
+  margin-bottom: 8px;
+}
+.cta-band p {
+  font-size: 14.5px;
+  color: #c3c7db;
+  max-width: 620px;
+}
+.cta-band .btn-primary {
+  background: #fff;
+  color: var(--ink);
+  box-shadow: none;
+}
+.cta-band .btn-primary:hover {
+  background: #ffe9e9;
+}
+
+/* ---------- footer ---------- */
+.site-footer {
+  background: #fff;
+  border-top: 1px solid var(--line);
+  padding: 42px 0 26px;
+  margin-top: 10px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.footer-brand p {
+  font-size: 13.5px;
+  color: var(--ink-mute);
+  margin-top: 12px;
+  max-width: 300px;
+}
+.footer-col h4 {
+  font-size: 14.5px;
+  margin-bottom: 14px;
+}
+.footer-col ul {
+  list-style: none;
+  display: grid;
+  gap: 9px;
+}
+.footer-col a {
+  font-size: 13.5px;
+  color: var(--ink-mute);
+}
+.footer-col a:hover {
+  color: var(--accent-deep);
+}
+.footer-bottom {
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+  font-size: 12.5px;
+  color: var(--ink-mute);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 980px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 30px; }
+  .cat-grid { grid-template-columns: repeat(3, 1fr); }
+  .record-layout { grid-template-columns: 1fr; }
+  .method-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 720px) {
+  .main-nav { display: none; }
+  .hero { padding: 40px 0 34px; }
+  .hero h1 { font-size: 27px; }
+  .record-grid { grid-template-columns: 1fr; }
+  .cat-grid { grid-template-columns: repeat(2, 1fr); }
+  .tl-item { grid-template-columns: 1fr; gap: 6px; }
+  .cta-band { padding: 30px 24px; }
+  .footer-grid { grid-template-columns: 1fr; }
+  section { padding: 38px 0; }
+}
+@media (max-width: 480px) {
+  .header-cta .btn-ghost { display: none; }
+  .hero-points { gap: 14px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">快</span>
+      快猫记录<small>记录世界 记录你</small>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="#top" class="active">首页</a>
+      <a href="#categories">记录分类</a>
+      <a href="#records">热门记录</a>
+      <a href="#method">记录方法</a>
+      <a href="#timeline">世界动态</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-ghost" href="#method">记录指南</a>
+      <a class="btn btn-primary" href="#records">开始记录</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="hero-tag">影像记录 · 生活分享 · 世界观察</span>
+        <h1>快猫记录世界记录你<br>把眼前的<em>每一刻</em>留下来</h1>
+        <p class="lead">快猫记录世界记录你，是一个围绕“记录”展开的内容社区。这里既关注世界正在发生的变化，也关注你日常生活里的细小片段——一次出行、一段街景、一顿家常饭，都可以成为值得保存的记录。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#records">浏览热门记录</a>
+          <a class="btn btn-ghost" href="#method">看记录方法</a>
+        </div>
+        <div class="hero-points">
+          <span>分类清晰，按主题浏览</span>
+          <span>侧重真实生活场景</span>
+          <span>提供整理与保存建议</span>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="frame-stack">
+          <div class="frame rec">
+            <div class="frame-head">
+              <span class="dot-live"><i></i>正在记录</span>
+              <span>今日</span>
+            </div>
+            <div class="frame-title">清晨的城市街道</div>
+            <div class="frame-desc">记录通勤路上的光影变化，是很多人开始一天的方式。</div>
+            <div class="bar"><i style="width:72%"></i></div>
+          </div>
+          <div class="frame">
+            <div class="frame-head"><span>生活片段</span><span>已整理</span></div>
+            <div class="frame-title">一周家常菜记录</div>
+            <div class="frame-desc">用简单的方式，把三餐四季留存在一个合集里。</div>
+            <div class="bar"><i style="width:54%"></i></div>
+          </div>
+          <div class="frame">
+            <div class="frame-head"><span>世界观察</span><span>进行中</span></div>
+            <div class="frame-title">季节与自然的变化</div>
+            <div class="frame-desc">同一处风景，不同时间拍摄，对比起来更有意思。</div>
+            <div class="bar"><i style="width:86%"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 分类 -->
+  <section id="categories">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>记录分类</h2>
+          <p>从不同角度切入，找到你更想记录和浏览的内容方向。</p>
+        </div>
+        <a class="more-link" href="#records">查看全部记录 →</a>
+      </div>
+      <div class="cat-grid">
+        <a class="cat-card" href="#records">
+          <div class="cat-icon">🏙️</div>
+          <strong>城市街景</strong>
+          <span>街道、建筑、光影</span>
+        </a>
+        <a class="cat-card" href="#records">
+          <div class="cat-icon">🌿</div>
+          <strong>自然四季</strong>
+          <span>植物、天气、节气</span>
+        </a>
+        <a class="cat-card" href="#records">
+          <div class="cat-icon">🍜</div>
+          <strong>日常饮食</strong>
+          <span>三餐、家常、小食</span>
+        </a>
+        <a class="cat-card" href="#records">
+          <div class="cat-icon">🚗</div>
+          <strong>出行旅途</strong>
+          <span>路上风景与见闻</span>
+        </a>
+        <a class="cat-card" href="#records">
+          <div class="cat-icon">👨‍👩‍👧</div>
+          <strong>家庭生活</strong>
+          <span>陪伴与日常片段</span>
+        </a>
+        <a class="cat-card" href="#records">
+          <div class="cat-icon">📚</div>
+          <strong>兴趣学习</strong>
+          <span>阅读、手工、练习</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门记录 + 侧栏 -->
+  <section id="records" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>热门记录</h2>
+          <p>这些记录来自真实生活场景，主题不同，但都围绕“把当下留下来”。</p>
+        </div>
+        <a class="more-link" href="#method">记录方法 →</a>
+      </div>
+
+      <div class="record-layout">
+        <div class="record-grid">
+          <article class="record-card">
+            <div class="thumb t1"><span>城市街景 · 记录</span></div>
+            <div class="record-body">
+              <h3>同一条街，拍了一整年</h3>
+              <p>固定机位、固定时间，把街道在不同季节的样子排在一起，很容易看出时间留下的痕迹。</p>
+              <div class="record-meta"><span>影像合集</span><span>生活观察</span></div>
+            </div>
+          </article>
+
+          <article class="record-card">
+            <div class="thumb t2"><span>自然四季 · 记录</span></div>
+            <div class="record-body">
+              <h3>阳台上的植物生长日记</h3>
+              <p>从播种到开花，用短片段按时间顺序排列，比单张照片更能体现变化过程。</p>
+              <div class="record-meta"><span>时间线</span><span>自然</span></div>
+            </div>
+          </article>
+
+          <article class="record-card">
+            <div class="thumb t3"><span>日常饮食 · 记录</span></div>
+            <div class="record-body">
+              <h3>一周家常菜合集</h3>
+              <p>不追求精致摆盘，只记录每天吃了什么，翻看时会想起当时的天气和心情。</p>
+              <div class="record-meta"><span>生活片段</span><span>饮食</span></div>
+            </div>
+          </article>
+
+          <article class="record-card">
+            <div class="thumb t4"><span>出行旅途 · 记录</span></div>
+            <div class="record-body">
+              <h3>短途出行的路上见闻</h3>
+              <p>把车窗外的风景、路边的小店、临时停下的地方串起来，就是一次完整的记录。</p>
+              <div class="record-meta"><span>旅途</span><span>见闻</span></div>
+            </div>
+          </article>
+        </div>
+
+        <aside>
+          <div class="side-panel">
+            <h3>正在被记录的话题</h3>
+            <ul class="topic-list">
+              <li>
+                <span class="topic-rank">1</span>
+                <div><strong>记录身边的季节变化</strong><em>自然 · 长期记录</em></div>
+              </li>
+              <li>
+                <span class="topic-rank">2</span>
+                <div><strong>我家附近的小店</strong><em>城市 · 生活观察</em></div>
+              </li>
+              <li>
+                <span class="topic-rank">3</span>
+                <div><strong>每天一道家常菜</strong><em>饮食 · 日常</em></div>
+              </li>
+              <li>
+                <span class="topic-rank">4</span>
+                <div><strong>通勤路上的光影</strong><em>城市 · 影像</em></div>
+              </li>
+              <li>
+                <span class="topic-rank">5</span>
+                <div><strong>陪伴家人的片段</strong><em>家庭 · 生活</em></div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="side-panel">
+            <h3>记录前的三个准备</h3>
+            <ul class="guide-list">
+              <li>想清楚要记录的主题和周期，避免内容过于零散。</li>
+              <li>选择顺手的设备，手机同样可以完成大部分记录。</li>
+              <li>提前约定文件命名方式，方便后续查找与整理。</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 记录方法 -->
+  <section id="method">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>记录方法</h2>
+          <p>记录不一定要专业设备，关键在于持续和条理。以下三个方向适合大多数人上手。</p>
+        </div>
+      </div>
+      <div class="method-grid">
+        <article class="method-card">
+          <div class="method-num">01 / 定主题</div>
+          <h3>先确定记录什么</h3>
+          <p>主题越具体，越容易坚持。与其泛泛地“记录生活”，不如先锁定一个明确对象，比如一条街、一盆植物、一种食物。</p>
+          <ul>
+            <li>选择你每天都会接触的事物</li>
+            <li>主题范围不要太大，便于长期跟踪</li>
+            <li>写下记录目的，方便日后回看</li>
+          </ul>
+        </article>
+
+        <article class="method-card">
+          <div class="method-num">02 / 定节奏</div>
+          <h3>再确定记录频率</h3>
+          <p>频率不必很高，重要的是稳定。每天一次、每周一次，甚至每月一次都可以，只要形成规律，内容自然会有对比价值。</p>
+          <ul>
+            <li>固定时间点，减少遗忘</li>
+            <li>忙时允许简化，但不要中断</li>
+            <li>用日历或备忘录做简单提醒</li>
+          </ul>
+        </article>
+
+        <article class="method-card">
+          <div class="method-num">03 / 定整理</div>
+          <h3>最后做好整理</h3>
+          <p>记录的价值很大一部分来自整理。把素材按时间、主题归类，才能在需要时快速找到，也更容易看出变化。</p>
+          <ul>
+            <li>统一命名规则，如“日期+主题”</li>
+            <li>定期备份，避免素材丢失</li>
+            <li>阶段性回看，补充文字说明</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 世界动态时间线 -->
+  <section id="timeline" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>世界动态 · 可记录的方向</h2>
+          <p>世界一直在变化，很多变化就在身边。以下方向适合作为长期观察的切入点。</p>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">按季节</div>
+          <div class="tl-body">
+            <h3>自然与气候的变化</h3>
+            <p>同一棵树、同一片天空、同一条河，在不同季节呈现的样子差别很大。按节气或月份拍摄，能形成清晰的对比记录。</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">按年份</div>
+          <div class="tl-body">
+            <h3>城市与社区的变化</h3>
+            <p>街道翻新、店铺更替、公共设施调整，这些变化往往在几年后才被注意到。定期在固定位置拍摄，是有效的观察方式。</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">按日常</div>
+          <div class="tl-body">
+            <h3>生活节奏的变化</h3>
+            <p>作息、饮食、出行方式、兴趣爱好的调整，都属于个人生活的变化。用简短文字配合影像记录，回看时会更完整。</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">按事件</div>
+          <div class="tl-body">
+            <h3>值得记住的节点</h3>
+            <p>搬家、毕业、旅行、团聚等节点，通常信息量较大。记录时除了画面，也可以补充时间、地点和当时的想法。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>常见问题</h2>
+          <p>关于记录这件事，很多人会先遇到下面这些疑问。</p>
+        </div>
+      </div>
+      <div class="faq-wrap">
+        <div class="faq-item">
+          <h3>没有专业设备，可以记录吗？</h3>
+          <p>可以。记录的核心是内容与持续性，而不是设备规格。手机足以完成日常影像记录，关键是把主题定清楚、把频率稳定下来，并做好文件整理。</p>
+        </div>
+        <div class="faq-item">
+          <h3>记录的内容很普通，还有意义吗？</h3>
+          <p>普通恰恰是生活记录的主要特点。很多内容在当下看起来平常，过一段时间再回看，反而更能体现变化。记录的意义往往在回看时才显现。</p>
+        </div>
+        <div class="faq-item">
+          <h3>坚持不下去怎么办？</h3>
+          <p>可以先把频率调低，比如从每天一次改成每周一次；也可以缩小主题范围，只记录一个具体对象。降低执行门槛，比强行维持高强度更容易长期坚持。</p>
+        </div>
+        <div class="faq-item">
+          <h3>素材太多，如何整理？</h3>
+          <p>建议按“时间+主题”的方式建立文件夹，并统一命名规则。定期删除明显重复或无意义的素材，同时做好备份，避免设备损坏导致内容丢失。</p>
+        </div>
+        <div class="faq-item">
+          <h3>记录时需要注意什么？</h3>
+          <p>拍摄他人或涉及私人场所时，应先征得同意；发布到公开平台前，注意避免泄露住址、证件、行程等敏感信息，保护自己也尊重他人。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h2>从今天开始，记录世界，也记录你自己</h2>
+          <p>不必等设备齐全，也不必等生活变得特别。选一个主题，定一个节奏，把眼前正在发生的事留下来，就是记录的开始。</p>
+        </div>
+        <a class="btn btn-primary" href="#categories">选择记录方向</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top">
+          <span class="brand-mark">快</span>
+          快猫记录<small>记录世界 记录你</small>
+        </a>
+        <p>围绕影像记录与生活分享的内容社区，关注世界的变化，也关注每个人的日常片段。</p>
+      </div>
+      <div class="footer-col">
+        <h4>内容方向</h4>
+        <ul>
+          <li><a href="#categories">城市街景</a></li>
+          <li><a href="#categories">自然四季</a></li>
+          <li><a href="#categories">日常饮食</a></li>
+          <li><a href="#categories">出行旅途</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>使用帮助</h4>
+        <ul>
+          <li><a href="#method">记录方法</a></li>
+          <li><a href="#method">整理与备份</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#timeline">观察方向</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>关于记录</h4>
+        <ul>
+          <li><a href="#records">热门记录</a></li>
+          <li><a href="#records">话题浏览</a></li>
+          <li><a href="#faq">隐私与安全</a></li>
+          <li><a href="#top">返回首页</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>快猫记录世界记录你 · 内容以真实生活记录与影像分享为主</span>
+      <span>请尊重他人隐私，发布内容前注意信息保护</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var links = document.querySelectorAll('.main-nav a[href^="#"]');
+  links.forEach(function (link) {
+    link.addEventListener('click', function () {
+      links.forEach(function (l) { l.classList.remove('active'); });
+      link.classList.add('active');
+    });
+  });
+})();
+</script>
+
+</body>
+      </html>
